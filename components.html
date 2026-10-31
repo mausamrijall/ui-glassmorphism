@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GlassUI component library - buttons, cards, inputs, switches, progress, tabs, badges, alerts, modals and more." />
+  <title>Components - GlassUI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <header class="nav glass" id="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Glass<span>UI</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="components.html" class="active">Components</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="COMMERCIAL.md">License</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+        </svg>
+      </button>
+      <a class="btn btn-ghost nav-cta" href="index.html#pricing">Get Started</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <span class="pill glass reveal">40+ components</span>
+      <h1 class="reveal">The <span class="gradient-text">main components</span></h1>
+      <p class="lede reveal">Every core building block of GlassUI, ready to copy into your project.</p>
+      <div class="hero-actions center reveal">
+        <a class="btn btn-primary" href="https://github.com/mausamrijall/ui-glassmorphism" target="_blank" rel="noopener noreferrer">View source</a>
+        <a class="btn btn-ghost" href="index.html#pricing">Get a license</a>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <div class="section-head left reveal">
+        <span class="eyebrow">Actions</span>
+        <h2>Buttons</h2>
+      </div>
+      <div class="component-grid">
+        <div class="demo-card glass reveal">
+          <h3>Variants</h3>
+          <div class="demo-row">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-ghost">Ghost</button>
+            <button class="btn btn-outline">Outline</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-outline" disabled>Disabled</button>
+          </div>
+        </div>
+        <div class="demo-card glass reveal">
+          <h3>Sizes</h3>
+          <div class="demo-row align-center">
+            <button class="btn btn-primary btn-sm">Small</button>
+            <button class="btn btn-primary">Medium</button>
+            <button class="btn btn-primary btn-lg">Large</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <div class="section-head left reveal">
+        <span class="eyebrow">Surfaces</span>
+        <h2>Cards</h2>
+      </div>
+      <div class="component-grid three">
+        <article class="feature-card glass reveal">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18"/></svg>
+          </span>
+          <h3>Glass card</h3>
+          <p>Frosted surface with border, blur and an inner highlight for depth.</p>
+          <button class="btn btn-ghost btn-sm">Action</button>
+        </article>
+        <article class="demo-card glass reveal">
+          <h3>Profile card</h3>
+          <div class="profile-row">
+            <span class="avatar avatar-lg" style="--i:2"></span>
+            <div>
+              <strong>Avery Chen</strong>
+              <p class="muted">Product designer</p>
+            </div>
+            <span class="chip glass">Pro</span>
+          </div>
+          <button class="btn btn-primary btn-sm">Follow</button>
+        </article>
+        <article class="demo-card glass reveal">
+          <h3>Stat card</h3>
+          <p class="muted">Monthly revenue</p>
+          <h2 class="stat-inline">$48,290</h2>
+          <span class="up">+18.4%</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <div class="section-head left reveal">
+        <span class="eyebrow">Forms</span>
+        <h2>Inputs and controls</h2>
+      </div>
+      <div class="component-grid">
+        <div class="demo-card glass reveal">
+          <h3>Text field</h3>
+          <label class="field">
+            <span>Email address</span>
+            <input type="email" placeholder="you@example.com" />
+          </label>
+          <label class="field">
+            <span>Password</span>
+            <input type="password" placeholder="••••••••" />
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea rows="3" placeholder="Type something..."></textarea>
+          </label>
+          <button class="btn btn-primary">Submit</button>
+        </div>
+        <div class="demo-card glass reveal">
+          <h3>Selection</h3>
+          <label class="toggle-row">
+            <span>Email notifications</span>
+            <input type="checkbox" class="switch" checked />
+          </label>
+          <label class="toggle-row">
+            <span>Dark mode</span>
+            <input type="checkbox" class="switch" />
+          </label>
+          <label class="check-row">
+            <input type="checkbox" class="check" checked />
+            <span>Remember this device</span>
+          </label>
+          <label class="check-row">
+            <input type="checkbox" class="check" />
+            <span>Subscribe to the newsletter</span>
+          </label>
+          <label class="field">
+            <span>Plan</span>
+            <select>
+              <option>Starter</option>
+              <option selected>Pro</option>
+              <option>Team</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <div class="section-head left reveal">
+        <span class="eyebrow">Feedback</span>
+        <h2>Badges, alerts and progress</h2>
+      </div>
+      <div class="component-grid">
+        <div class="demo-card glass reveal">
+          <h3>Badges</h3>
+          <div class="demo-row">
+            <span class="badge-pill">Default</span>
+            <span class="badge-pill success">Success</span>
+            <span class="badge-pill warning">Warning</span>
+            <span class="badge-pill danger">Danger</span>
+            <span class="badge-pill info">Info</span>
+          </div>
+          <h3 class="mt">Avatars</h3>
+          <div class="avatars large">
+            <span class="avatar" style="--i:0"></span>
+            <span class="avatar" style="--i:1"></span>
+            <span class="avatar" style="--i:2"></span>
+            <span class="avatar avatar-more">+9</span>
+          </div>
+        </div>
+        <div class="demo-card glass reveal">
+          <h3>Alerts</h3>
+          <div class="alert glass success"><strong>Success</strong><span>Your changes were saved.</span></div>
+          <div class="alert glass info"><strong>Info</strong><span>A new version is available.</span></div>
+          <div class="alert glass warning"><strong>Warning</strong><span>Your trial ends in 3 days.</span></div>
+          <div class="alert glass danger"><strong>Error</strong><span>Something went wrong.</span></div>
+        </div>
+        <div class="demo-card glass reveal">
+          <h3>Progress</h3>
+          <div class="progress-row"><span>Design tokens</span><strong>92%</strong></div>
+          <div class="progress"><span style="--p:92%"></span></div>
+          <div class="progress-row"><span>Components</span><strong>68%</strong></div>
+          <div class="progress"><span style="--p:68%"></span></div>
+          <div class="progress-row"><span>Documentation</span><strong>35%</strong></div>
+          <div class="progress"><span style="--p:35%"></span></div>
+        </div>
+        <div class="demo-card glass reveal">
+          <h3>Loader</h3>
+          <div class="demo-row align-center">
+            <span class="spinner" aria-label="Loading"></span>
+            <span class="skeleton"></span>
+          </div>
+          <p class="muted">Spinners and skeletons for loading states.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <div class="section-head left reveal">
+        <span class="eyebrow">Navigation</span>
+        <h2>Tabs, breadcrumbs and menus</h2>
+      </div>
+      <div class="component-grid">
+        <div class="demo-card glass reveal">
+          <h3>Tabs</h3>
+          <div class="tabs" role="tablist">
+            <button class="tab active" role="tab" aria-selected="true" data-tab="overview">Overview</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="activity">Activity</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="settings">Settings</button>
+          </div>
+          <p class="tab-panel" id="tabPanel">A calm, frosted surface for your most important content.</p>
+        </div>
+        <div class="demo-card glass reveal">
+          <h3>Breadcrumbs</h3>
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="components.html">Components</a>
+            <span>/</span>
+            <strong>Tabs</strong>
+          </nav>
+          <h3 class="mt">Pagination</h3>
+          <div class="pagination">
+            <button class="icon-btn" aria-label="Previous page">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 6l-6 6 6 6"/></svg>
+            </button>
+            <button class="page active">1</button>
+            <button class="page">2</button>
+            <button class="page">3</button>
+            <button class="icon-btn" aria-label="Next page">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <div class="section-head left reveal">
+        <span class="eyebrow">Overlays</span>
+        <h2>Modal and tooltip</h2>
+      </div>
+      <div class="component-grid">
+        <div class="demo-card glass reveal">
+          <h3>Modal dialog</h3>
+          <p class="muted">Frosted dialog with a blurred overlay.</p>
+          <button class="btn btn-primary" id="openModal">Open modal</button>
+        </div>
+        <div class="demo-card glass reveal">
+          <h3>Tooltip</h3>
+          <p class="muted">Hover the button to reveal a tooltip.</p>
+          <span class="tooltip-wrap">
+            <button class="btn btn-ghost" aria-describedby="tip">Hover me</button>
+            <span class="tooltip glass" role="tooltip" id="tip">Copied to clipboard</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="component-section">
+      <div class="section-head left reveal">
+        <span class="eyebrow">Data</span>
+        <h2>Table and toast</h2>
+      </div>
+      <div class="component-grid">
+        <div class="demo-card glass reveal">
+          <h3>Table</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Name</th><th>Plan</th><th>Status</th><th>MRR</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Avery Chen</td><td>Pro</td><td><span class="badge-pill success">Active</span></td><td>$19</td></tr>
+                <tr><td>Ravi Patel</td><td>Team</td><td><span class="badge-pill success">Active</span></td><td>$49</td></tr>
+                <tr><td>Nora Silva</td><td>Starter</td><td><span class="badge-pill warning">Trial</span></td><td>$0</td></tr>
+                <tr><td>Liam Novak</td><td>Pro</td><td><span class="badge-pill danger">Past due</span></td><td>$19</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="demo-card glass reveal">
+          <h3>Toast</h3>
+          <p class="muted">Click to trigger a temporary notification.</p>
+          <div class="demo-row">
+            <button class="btn btn-primary" data-toast="Saved successfully">Success toast</button>
+            <button class="btn btn-outline" data-toast="Something needs attention">Info toast</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div class="cta-inner glass">
+        <h2>Ship with all 40+ components</h2>
+        <p class="lede">Open source for non-commercial use. Commercial projects need a paid license.</p>
+        <div class="hero-actions center">
+          <a class="btn btn-primary" href="index.html#pricing">View pricing</a>
+          <a class="btn btn-ghost" href="COMMERCIAL.md">License terms</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass">
+    <div class="footer-brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Glass<span>UI</span></span>
+    </div>
+    <p>Built with pure HTML, CSS and JavaScript.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="COMMERCIAL.md">License</a>
+      <a href="https://github.com/mausamrijall/ui-glassmorphism" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <h3 id="modalTitle">Delete project?</h3>
+        <button class="icon-btn" id="closeModal" aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <p class="muted">This action cannot be undone. The project and all its data will be permanently removed.</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="cancelModal">Cancel</button>
+        <button class="btn btn-danger" id="confirmModal">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="components.js"></script>
+</body>
+</html>
