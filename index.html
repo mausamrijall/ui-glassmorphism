@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GlassUI - a modern glassmorphism design system with frosted glass cards, gradients and smooth motion." />
+  <title>GlassUI - Glassmorphism Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <header class="nav glass" id="nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Glass<span>UI</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#features">Features</a>
+      <a href="#components">Components</a>
+      <a href="#stats">Stats</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+        </svg>
+      </button>
+      <button class="btn btn-ghost nav-cta" id="navCta">Get Started</button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <span class="pill glass">Now with 40+ components</span>
+        <h1>Design that feels<br /><span class="gradient-text">like glass</span></h1>
+        <p class="lede">
+          A bold glassmorphism design system with frosted panels, soft gradients and fluid motion.
+          Ship beautiful interfaces in minutes, not weeks.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="primaryCta">
+            Start building
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </button>
+          <a class="btn btn-ghost" href="#components">Browse components</a>
+        </div>
+        <div class="hero-meta">
+          <div class="avatars">
+            <span class="avatar" style="--i:0"></span>
+            <span class="avatar" style="--i:1"></span>
+            <span class="avatar" style="--i:2"></span>
+            <span class="avatar" style="--i:3"></span>
+          </div>
+          <p>Trusted by <strong>12,000+</strong> designers and developers</p>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" data-delay="120">
+        <div class="showcase glass">
+          <div class="showcase-head">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="showcase-title">analytics.overview</span>
+          </div>
+          <div class="showcase-card glass-soft">
+            <div class="showcase-card-top">
+              <div>
+                <p class="muted">Monthly revenue</p>
+                <h3>$48,290 <span class="up">+18.4%</span></h3>
+              </div>
+              <span class="chip glass">Live</span>
+            </div>
+            <div class="bars" aria-hidden="true">
+              <span style="--h:38%"></span>
+              <span style="--h:62%"></span>
+              <span style="--h:48%"></span>
+              <span style="--h:76%"></span>
+              <span style="--h:58%"></span>
+              <span style="--h:88%"></span>
+              <span style="--h:70%"></span>
+            </div>
+          </div>
+          <div class="float-card glass" style="--x:-18px; --y:26px">
+            <span class="float-icon">A</span>
+            <div>
+              <p class="muted">Active users</p>
+              <strong>8,412</strong>
+            </div>
+          </div>
+          <div class="float-card float-card-alt glass" style="--y:-24px; --right:-14px">
+            <div class="ring" style="--p:74"></div>
+            <div>
+              <p class="muted">Conversion</p>
+              <strong>74%</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="section-head reveal">
+        <span class="eyebrow">Features</span>
+        <h2>Everything you need to build in the glass age</h2>
+        <p class="lede">Composable, accessible and endlessly themeable building blocks.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card glass reveal" style="--i:0">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5M3 17l9 5 9-5"/></svg>
+          </span>
+          <h3>Layered depth</h3>
+          <p>Stacked transparency, blur and light borders create convincing glass surfaces.</p>
+        </article>
+        <article class="feature-card glass reveal" style="--i:1">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+          </span>
+          <h3>Fluid gradients</h3>
+          <p>Animated color fields drift behind every panel for a living, luminous feel.</p>
+        </article>
+        <article class="feature-card glass reveal" style="--i:2">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8"/></svg>
+          </span>
+          <h3>Responsive by default</h3>
+          <p>Layouts reflow gracefully from ultrawide monitors to the smallest phones.</p>
+        </article>
+        <article class="feature-card glass reveal" style="--i:3">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+          </span>
+          <h3>Light and dark</h3>
+          <p>One toggle switches every token, keeping contrast and legibility intact.</p>
+        </article>
+        <article class="feature-card glass reveal" style="--i:4">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+          </span>
+          <h3>Zero dependencies</h3>
+          <p>Pure HTML, CSS and JavaScript. Drop it into any stack without friction.</p>
+        </article>
+        <article class="feature-card glass reveal" style="--i:5">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </span>
+          <h3>Motion with intent</h3>
+          <p>Scroll reveals, counters and micro-interactions that respect reduced motion.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="components" id="components">
+      <div class="section-head reveal">
+        <span class="eyebrow">Components</span>
+        <h2>Try the glass toolkit</h2>
+        <p class="lede">Interactive samples built with the same tokens you will ship with.</p>
+      </div>
+      <div class="component-grid">
+        <div class="demo-card glass reveal" style="--i:0">
+          <h3>Buttons</h3>
+          <div class="demo-row">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-ghost">Ghost</button>
+            <button class="btn btn-outline">Outline</button>
+          </div>
+        </div>
+        <div class="demo-card glass reveal" style="--i:1">
+          <h3>Input</h3>
+          <label class="field">
+            <span>Email address</span>
+            <input type="email" placeholder="you@example.com" />
+          </label>
+          <label class="toggle-row">
+            <span>Email notifications</span>
+            <input type="checkbox" class="switch" checked />
+          </label>
+        </div>
+        <div class="demo-card glass reveal" style="--i:2">
+          <h3>Progress</h3>
+          <div class="progress-row">
+            <span>Design tokens</span>
+            <strong>92%</strong>
+          </div>
+          <div class="progress"><span style="--p:92%"></span></div>
+          <div class="progress-row">
+            <span>Components</span>
+            <strong>68%</strong>
+          </div>
+          <div class="progress"><span style="--p:68%"></span></div>
+        </div>
+        <div class="demo-card glass reveal" style="--i:3">
+          <h3>Tabs</h3>
+          <div class="tabs" role="tablist">
+            <button class="tab active" role="tab" aria-selected="true" data-tab="overview">Overview</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="activity">Activity</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="settings">Settings</button>
+          </div>
+          <p class="tab-panel" id="tabPanel">A calm, frosted surface for your most important content.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" id="stats">
+      <div class="stats-inner glass reveal">
+        <div class="stat">
+          <span class="stat-number" data-count="40">0</span><span class="stat-suffix">+</span>
+          <p>Components</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="12000">0</span><span class="stat-suffix">+</span>
+          <p>Developers</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="99">0</span><span class="stat-suffix">%</span>
+          <p>Lighthouse</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="0">0</span>
+          <p>Dependencies</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pricing</span>
+        <h2>Simple plans, transparent value</h2>
+        <p class="lede">Start free. Upgrade when your team grows.</p>
+      </div>
+      <div class="price-grid">
+        <article class="price-card glass reveal" style="--i:0">
+          <h3>Starter</h3>
+          <p class="price"><span>$0</span>/mo</p>
+          <ul>
+            <li>12 core components</li>
+            <li>Light and dark themes</li>
+            <li>Community support</li>
+          </ul>
+          <button class="btn btn-ghost">Choose Starter</button>
+        </article>
+        <article class="price-card glass featured reveal" style="--i:1">
+          <span class="badge">Most popular</span>
+          <h3>Pro</h3>
+          <p class="price"><span>$19</span>/mo</p>
+          <ul>
+            <li>All 40+ components</li>
+            <li>Figma source files</li>
+            <li>Priority support</li>
+            <li>Lifetime updates</li>
+          </ul>
+          <button class="btn btn-primary">Choose Pro</button>
+        </article>
+        <article class="price-card glass reveal" style="--i:2">
+          <h3>Team</h3>
+          <p class="price"><span>$49</span>/mo</p>
+          <ul>
+            <li>Unlimited seats</li>
+            <li>Shared design tokens</li>
+            <li>Dedicated support</li>
+          </ul>
+          <button class="btn btn-ghost">Choose Team</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div class="cta-inner glass">
+        <h2>Ready to make the web feel lighter?</h2>
+        <p class="lede">Grab the toolkit and ship your first frosted interface today.</p>
+        <div class="hero-actions center">
+          <button class="btn btn-primary" id="ctaButton">Get GlassUI free</button>
+          <a class="btn btn-ghost" href="https://github.com/mausamrijall/ui-glassmorphism" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass">
+    <div class="footer-brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">Glass<span>UI</span></span>
+    </div>
+    <p>Built with pure HTML, CSS and JavaScript.</p>
+    <div class="footer-links">
+      <a href="#features">Features</a>
+      <a href="#components">Components</a>
+      <a href="#pricing">Pricing</a>
+      <a href="https://github.com/mausamrijall/ui-glassmorphism" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </footer>
+
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
